@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         // קישור לרכיבים הקיימים שלך ב-XML
         EditText etUserName = findViewById(R.id.etUserName);
         EditText etDailyGoal = findViewById(R.id.etDailyGoal);
-        Button btnSend = findViewById(R.id.bunSend);
+        Button btnSend = findViewById(R.id.btnSend);
         Button btnCamera = findViewById(R.id.btnCamera);
 
         // לחיצה על "יאללה נתחיל"

@@ -7,27 +7,10 @@
     android:background="#FFFFFF"
     android:padding="16dp">
 
-    <ImageButton
-        android:id="@+id/btnSettings"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        android:contentDescription="Settings"
-        android:elevation="10dp"
-        android:padding="8dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/hg" />
-
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btnSettings"
-        android:gravity="center_horizontal"
         android:orientation="vertical">
 
         <androidx.cardview.widget.CardView
@@ -97,7 +80,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/bunSend"
+        android:id="@+id/btnSend"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_below="@+id/linearLayout"
