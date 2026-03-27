@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E3F2FD"
+    android:background="#FFFFFF"
     android:padding="16dp">
 
     <ImageButton
@@ -12,81 +13,125 @@
         android:layout_height="48dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:contentDescription="Settings"
+        android:elevation="10dp"
         android:padding="8dp"
-        android:src="@android:drawable/ic_menu_manage" />
+        android:scaleType="fitCenter"
+        android:src="@drawable/hg" />
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_below="@id/btnSettings"
         android:gravity="center_horizontal"
         android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/tvTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
-            android:text="My Water Tracking"
-            android:textColor="#1976D2"
-            android:textSize="32sp"
-            android:textStyle="bold" />
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="15dp"
-            app:cardElevation="4dp"
-            android:layout_margin="8dp">
+            android:layout_margin="8dp"
+            app:cardBackgroundColor="#FAFAFA"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="2dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="20dp">
+                android:padding="24dp">
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:gravity="center"
+                    android:text="DRINK UP\nMy Water Tracking"
+                    android:textColor="#80CBC4"
+                    android:textSize="26sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="what's your name?"
-                    android:textSize="16sp" />
+                    android:text="What's your name?"
+                    android:textColor="#8E8E8E"
+                    android:textSize="15sp" />
 
                 <EditText
                     android:id="@+id/etUserName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="#B2EBF2"
                     android:hint="my name is ..."
                     android:importantForAutofill="no"
                     android:inputType="textPersonName"
-                    android:minHeight="48dp" />
+                    android:minHeight="48dp"
+                    android:textColorHint="#D1D1D1" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Daily goal (cups):"
-                    android:textSize="16sp" />
+                    android:layout_marginTop="16dp"
+                    android:text="Daily goal (in cups):"
+                    android:textColor="#8E8E8E"
+                    android:textSize="15sp" />
 
                 <EditText
                     android:id="@+id/etDailyGoal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="#B2EBF2"
                     android:hint="for example: 8"
                     android:importantForAutofill="no"
                     android:inputType="number"
-                    android:minHeight="48dp" />
+                    android:minHeight="48dp"
+                    android:textColorHint="#D1D1D1" />
+
             </LinearLayout>
         </androidx.cardview.widget.CardView>
-
-        <Button
-            android:id="@+id/btnCamera"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginTop="25dp"
-            android:text="לצילום הבקבוק"
-            android:backgroundTint="#1976D2"
-            android:textColor="#FFFFFF" />
-
     </LinearLayout>
+
+    <Button
+        android:id="@+id/bunSend"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_below="@+id/linearLayout"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#B2EBF2"
+        android:text="Let's go"
+        android:textAllCaps="false"
+        android:textColor="#4F97A3"
+        android:textSize="17sp"
+        app:cornerRadius="28dp" />
+
+    <Button
+        android:id="@+id/btnCamera"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="#E0F7FA"
+        android:text="Take a picture"
+        android:textAllCaps="false"
+        android:textColor="#80CBC4"
+        app:cornerRadius="28dp"
+        app:strokeColor="#B2EBF2"
+        app:strokeWidth="1dp" />
+
+    <TextView
+        android:id="@+id/textViewquestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnCamera"
+        android:layout_marginBottom="12dp"
+        android:gravity="center"
+        android:text="Do you like to drink water?\nTake a picture of your bottle"
+        android:textColor="#A2D9CE"
+        android:textSize="14sp" />
+
 </RelativeLayout>
