@@ -39,7 +39,7 @@ public class CameraActivity extends AppCompatActivity {
         });
 
         btnClose.setOnClickListener(v -> {
-            finish(); // סוגר את המסך וחוזר למסך הראשי
+            finish();
         });
     }
 }

@@ -23,28 +23,27 @@ public class DisplayActivity extends AppCompatActivity {
         Button btnCalculate = findViewById(R.id.btnCalculate);
         LinearLayout dynamicContainer = findViewById(R.id.dynamicContainer);
 
-        // קבלת הנתונים מהמסך הקודם
+
         String name = getIntent().getStringExtra("USER_NAME");
         int goal = Integer.parseInt(getIntent().getStringExtra("DAILY_GOAL"));
 
-        tvWelcome.setText("שלום " + name + "!");
+        tvWelcome.setText("helo " + name + "!");
 
         btnCalculate.setOnClickListener(v -> {
             int drank = Integer.parseInt(etWaterDrank.getText().toString());
             int left = goal - drank;
 
-            // הסרת טקסט קודם אם היה
+
             dynamicContainer.removeAllViews();
 
-            // יצירה דינמית של TextView (דרישת חובה)
+
             TextView tvResult = new TextView(this);
             tvResult.setTextSize(18);
 
             if (left > 0) {
-                tvResult.setText("נשארו לך עוד " + left + " כוסות ליעד!");
+                tvResult.setText("you hve left more " + left + " cups to the destintion");
             } else {
-                tvResult.setText("הגעת ליעד! כל הכבוד!");
-                // הצגת Dialog (דרישת חובה)
+                tvResult.setText("you hve reached your destintion ! good jub");
                 showSuccessDialog();
             }
             dynamicContainer.addView(tvResult);
@@ -53,24 +52,24 @@ public class DisplayActivity extends AppCompatActivity {
 
     private void showSuccessDialog() {
         new AlertDialog.Builder(this)
-                .setTitle("כל הכבוד!")
-                .setMessage("הגעת ליעד השתייה שלך להיום!")
-                .setPositiveButton("אישור", null)
+                .setTitle("good jub !")
+                .setMessage("you made it to your drink destintion today!")
+                .setPositiveButton("confirm", null)
                 .show();
     }
 
-    // הוספת Options Menu (דרישת חובה)
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        menu.add("אודות");
-        menu.add("יציאה");
+        menu.add("about");
+        menu.add("exit");
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getTitle().equals("יציאה")) finishAffinity();
-        if (item.getTitle().equals("אודות")) Toast.makeText(this, "DrinkUp - אפליקציה לבריאות שלך", Toast.LENGTH_SHORT).show();
+        if (item.getTitle().equals("exit")) finishAffinity();
+        if (item.getTitle().equals("about")) Toast.makeText(this, "DrinkUp - the app for your health", Toast.LENGTH_SHORT).show();
         return super.onOptionsItemSelected(item);
     }
 }
