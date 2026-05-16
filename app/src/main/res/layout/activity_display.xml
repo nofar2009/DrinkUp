@@ -56,7 +56,7 @@
             android:id="@+id/btnCalculate"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:text="send"
+            android:text="sendd"
             android:layout_marginTop="16dp"
             android:backgroundTint="#80CBC4"
             android:textColor="#FFFFFF" />
