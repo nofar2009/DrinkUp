@@ -10,13 +10,16 @@
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_margin="16dp"
+        android:layout_marginEnd="4dp"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:contentDescription="close"
-        android:src="@android:drawable/ic_menu_close_clear_cancel"
-        android:scaleType="fitCenter"
         android:padding="8dp"
+        android:scaleType="fitCenter"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.099" />
 
     <TextView
         android:id="@+id/floatingText"
